@@ -52,11 +52,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 @app.get("/api/health")
-def health() -> dict[str, str]:
-    return {"status": "ok"}
+def health(
+    db: Session = Depends(get_db),
+) -> dict[str, str]:
 
+    try:
+        db.execute(select(1))
+        return {
+            "status": "ok",
+            "database": "connected",
+        }
+
+    except Exception:
+        raise HTTPException(
+            status_code=503,
+            detail="Database unavailable",
+        )
 
 @app.get(
     "/api/production",
