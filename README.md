@@ -52,7 +52,8 @@ Python Analysis Layer
         ↓
 PostgreSQL
 
-Docker provides containerization and GitHub Actions provides continuous integration.
+
+## Docker provides containerization and GitHub Actions provides continuous integration.
 
 Technology Stack
 
