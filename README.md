@@ -27,7 +27,7 @@ The primary research objective is to investigate how production, machine, and qu
 
 The core workflow is:
 
-```text
+
 Production Data
       ↓
 Data Analysis
@@ -51,6 +51,7 @@ FastAPI REST API
 Python Analysis Layer
         ↓
 PostgreSQL
+
 
 
 ## Docker provides containerization and GitHub Actions provides continuous integration.
@@ -147,3 +148,4 @@ Comparison of rule-based and machine-learning approaches
 Project Goal
 
 To demonstrate a transparent, reproducible human-in-the-loop digital assistance system that transforms production data into detection, explanation, recommendation, and human decision support.
+
