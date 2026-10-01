@@ -109,22 +109,61 @@ To demonstrate a transparent, reproducible human-in-the-loop digital assistance 
 ```text
 Repository Structure
 ProdAssist/
-├── .github/workflows/ci.yml
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
 ├── backend/
 │   ├── app/
-│   └── tests/
+│   │   ├── __init__.py
+│   │   ├── analysis.py
+│   │   ├── config.py
+│   │   ├── database.py
+│   │   ├── main.py
+│   │   ├── models.py
+│   │   ├── schemas.py
+│   │   └── seed.py
+│   │
+│   ├── tests/
+│   │   ├── test_analysis.py
+│   │   └── test_api.py
+│   │
+│   ├── Dockerfile
+│   └── requirements.txt
+│
 ├── data/
+│   ├── production_data.csv
+│   └── README.md
+│
 ├── docs/
+│   ├── methodology.md
+│   ├── evaluation_plan.md
+│   ├── data_dictionary.md
+│   └── data_quality.md
+│
 ├── frontend/
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── api.ts
+│   │   ├── main.tsx
+│   │   └── styles.css
+│   │
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── package.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+│
 ├── .env.example
 ├── .gitignore
 ├── docker-compose.yml
 └── README.md
 
 
-
 The core workflow is:
-
 
 Production Data
       ↓
