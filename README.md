@@ -122,7 +122,7 @@ ProdAssist/
 └── README.md
 
 
-```text
+
 The core workflow is:
 
 
@@ -141,7 +141,7 @@ Human Decision
 Decision Record
 
 
-```text
+
 The prototype uses a layered architecture:
 
 React / TypeScript
