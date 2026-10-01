@@ -25,35 +25,6 @@ ProdAssist is therefore designed as a decision-support system rather than an aut
 
 The primary research objective is to investigate how production, machine, and quality indicators can be combined to detect meaningful production deviations and provide transparent explanations and actionable recommendations while keeping the human decision-maker in control.
 
-The core workflow is:
-
-```text
-Production Data
-      ↓
-Data Analysis
-      ↓
-Deviation Detection
-      ↓
-Explanation
-      ↓
-Recommendation
-      ↓
-Human Decision
-      ↓
-Decision Record
-
-The prototype uses a layered architecture:
-```text
-React / TypeScript
-        ↓
-FastAPI REST API
-        ↓
-Python Analysis Layer
-        ↓
-PostgreSQL
-
-
-
 ## Docker provides containerization and GitHub Actions provides continuous integration.
 
 Technology Stack
@@ -65,23 +36,7 @@ Infrastructure: Docker, Docker Compose
 CI/CD: GitHub Actions
 Testing: Pytest
 
-```text
-Repository Structure
-ProdAssist/
-├── .github/workflows/ci.yml
-├── backend/
-│   ├── app/
-│   └── tests/
-├── data/
-├── docs/
-├── frontend/
-├── .env.example
-├── .gitignore
-├── docker-compose.yml
-└── README.md
-
-
-Deviation Detection
+## Deviation Detection
 
 ProdAssist initially uses transparent rule-based analysis.
 
@@ -93,7 +48,7 @@ It then evaluates contextual indicators such as downtime, defect rate, machine t
 
 The thresholds are configurable and documented as prototype assumptions rather than universal industrial standards.
 
-Human-in-the-Loop
+## Human-in-the-Loop
 
 ProdAssist does not automatically control production processes.
 
@@ -108,7 +63,7 @@ Escalate
 
 The human decision is recorded, creating a traceable interaction between system assistance and human judgement.
 
-Research Prototype Status
+## Research Prototype Status
 
 ProdAssist is a reproducible proof-of-concept demonstrating:
 
@@ -126,13 +81,14 @@ GitHub Actions CI
 
 The current implementation uses synthetic/illustrative production data and transparent rule-based analysis.
 
-Limitations
+## Limitations
 Initial dataset is synthetic/illustrative.
 Detection thresholds require validation against real production data.
 The current analysis is rule-based rather than machine-learning based.
 The prototype has not yet been validated in a live industrial environment.
 Human evaluation is currently limited to prototype-level testing.
-Future Research
+
+## Future Research
 
 Potential extensions include:
 
@@ -145,7 +101,53 @@ Multi-machine production networks
 Explainable AI
 Operator feedback learning
 Comparison of rule-based and machine-learning approaches
-Project Goal
+
+## Project Goal
 
 To demonstrate a transparent, reproducible human-in-the-loop digital assistance system that transforms production data into detection, explanation, recommendation, and human decision support.
 
+```text
+Repository Structure
+ProdAssist/
+├── .github/workflows/ci.yml
+├── backend/
+│   ├── app/
+│   └── tests/
+├── data/
+├── docs/
+├── frontend/
+├── .env.example
+├── .gitignore
+├── docker-compose.yml
+└── README.md
+
+
+```text
+The core workflow is:
+
+
+Production Data
+      ↓
+Data Analysis
+      ↓
+Deviation Detection
+      ↓
+Explanation
+      ↓
+Recommendation
+      ↓
+Human Decision
+      ↓
+Decision Record
+
+
+```text
+The prototype uses a layered architecture:
+
+React / TypeScript
+        ↓
+FastAPI REST API
+        ↓
+Python Analysis Layer
+        ↓
+PostgreSQL
