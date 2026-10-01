@@ -27,7 +27,7 @@ The primary research objective is to investigate how production, machine, and qu
 
 The core workflow is:
 
-
+```text
 Production Data
       ↓
 Data Analysis
@@ -43,7 +43,7 @@ Human Decision
 Decision Record
 
 The prototype uses a layered architecture:
-
+```text
 React / TypeScript
         ↓
 FastAPI REST API
@@ -65,7 +65,7 @@ Infrastructure: Docker, Docker Compose
 CI/CD: GitHub Actions
 Testing: Pytest
 
-
+```text
 Repository Structure
 ProdAssist/
 ├── .github/workflows/ci.yml
